@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['buildx', 'build', '-t', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY_NAME}/${_IMAGE_NAME}:$_MODEL_VERSION', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY_NAME}/${_IMAGE_NAME}:$_MODEL_VERSION']
+images:
+  - '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY_NAME}/${_IMAGE_NAME}:$_MODEL_VERSION'
+substitutions:
+  _MODEL_VERSION: "latest"
+  _LOCATION: "us-central1"
+  _REPOSITORY_NAME: "repo-vertexai"
+  _IMAGE_NAME: "text-classification-model"

@@ -1,0 +1,5 @@
+kfp==2.9.0
+google-cloud-aiplatform==1.66.0
+google-cloud-bigquery==3.25.0
+datasets==3.0.0
+pandas-gbq==0.23.1

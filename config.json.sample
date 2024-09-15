@@ -1,0 +1,13 @@
+{
+    "project_id": "<your_project_id>",
+    "region": "us-central1",
+    "bucket_name": "vertexai-sandbox-bucket",
+    "dataset_id": "vertexai_test_dataset",
+    "table_id": "text_classification_data",
+    "service_account": "xxx@<your_project_id>.iam.gserviceaccount.com",
+    "repository_name": "repo-vertexai",
+    "image_name": "text-classification-model",
+    "model_tag": "v1",
+    "model_display_name": "text-classification-model",
+    "endpoint_display_name": "text-classification-endpoint"
+}

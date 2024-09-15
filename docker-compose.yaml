@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mlops-v1:
+    image: mlops-v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credential.json
